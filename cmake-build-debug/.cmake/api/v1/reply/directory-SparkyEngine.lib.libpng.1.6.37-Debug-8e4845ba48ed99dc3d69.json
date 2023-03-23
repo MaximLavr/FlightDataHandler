@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "SparkyEngine/lib/libpng/1.6.37",
+		"source" : "SparkyEngine/lib/libpng/1.6.37"
+	}
+}

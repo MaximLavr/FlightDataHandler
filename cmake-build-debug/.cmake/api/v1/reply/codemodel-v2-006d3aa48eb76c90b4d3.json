@@ -1,0 +1,300 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						5,
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "SparkyEngine/lib/glfw",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SparkyEngine.lib.glfw-Debug-1a00427a51f88f805e72.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "SparkyEngine/lib/glfw",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "SparkyEngine/lib/glfw/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SparkyEngine.lib.glfw.src-Debug-1d466089de2d5baee598.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "SparkyEngine/lib/glfw/src",
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"build" : "SparkyEngine/lib/glfw/docs",
+					"jsonFile" : "directory-SparkyEngine.lib.glfw.docs-Debug-74294ef571f816b06543.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "SparkyEngine/lib/glfw/docs",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "SparkyEngine/lib/glew",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SparkyEngine.lib.glew-Debug-f6ff0bd703620484d8cd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "SparkyEngine/lib/glew",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"build" : "SparkyEngine/lib/FreeImage",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SparkyEngine.lib.FreeImage-Debug-4acc833030c1b9bc30af.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "SparkyEngine/lib/FreeImage",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "SparkyEngine/lib/libpng/1.6.37",
+					"jsonFile" : "directory-SparkyEngine.lib.libpng.1.6.37-Debug-8e4845ba48ed99dc3d69.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SparkyEngine/lib/libpng/1.6.37"
+				},
+				{
+					"build" : "SparkyEngine/lib/freetype-2.10.0",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SparkyEngine.lib.freetype-2.10.0-Debug-58d323c1c12dc2bb8044.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "SparkyEngine/lib/freetype-2.10.0",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						6
+					],
+					"name" : "NavigationSystem",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						4,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "glew",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "FreeImage",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "freetype",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 5,
+					"id" : "FreeImage::@040e182a289347412136",
+					"jsonFile" : "target-FreeImage-Debug-e97c44f46d8aa327edc4.json",
+					"name" : "FreeImage",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NavigationSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NavigationSystem-Debug-032c5d92c95a38606d35.json",
+					"name" : "NavigationSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "docs::@5714d28d8be16e3377d5",
+					"jsonFile" : "target-docs-Debug-99e10e67d01053196184.json",
+					"name" : "docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "freetype::@c6c09bc80bfc3799c009",
+					"jsonFile" : "target-freetype-Debug-31fff2b18299e50ba891.json",
+					"name" : "freetype",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@ae2e49e1d3f9f3224523",
+					"jsonFile" : "target-glfw-Debug-d01c93a5347683d117c0.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libglew_shared::@7820ca8949c272dc3d1d",
+					"jsonFile" : "target-libglew_shared-Debug-baefd3170ee4fe00e22e.json",
+					"name" : "libglew_shared",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libglew_static::@7820ca8949c272dc3d1d",
+					"jsonFile" : "target-libglew_static-Debug-a8b26af73102bcea1257.json",
+					"name" : "libglew_static",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@93ad3f734871a8b39db4",
+					"jsonFile" : "target-uninstall-Debug-14acbb047b0563ba2743.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "update_mappings::@ae2e49e1d3f9f3224523",
+					"jsonFile" : "target-update_mappings-Debug-fdb505281e9571004095.json",
+					"name" : "update_mappings",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/maxim_lavrinenko/Documents/projects/NavigationSystem/cmake-build-debug",
+		"source" : "/Users/maxim_lavrinenko/Documents/projects/NavigationSystem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

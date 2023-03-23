@@ -1,0 +1,12 @@
+prefix=/opt/homebrew/Cellar/openal-soft/1.22.2
+exec_prefix=${prefix}
+libdir=/opt/homebrew/Cellar/openal-soft/1.22.2/lib
+includedir=/opt/homebrew/Cellar/openal-soft/1.22.2/include
+
+Name: OpenAL
+Description: OpenAL is a cross-platform 3D audio API
+Requires: 
+Version: 1.22.2
+Libs: -L${libdir} -lopenal 
+Libs.private:
+Cflags: -I${includedir} -I${includedir}/AL 

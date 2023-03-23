@@ -1,0 +1,118 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"SparkyEngine/lib/glew/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 209,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 212,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 215,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"SparkyEngine/lib/glew/lib/libglewd.a"
+			],
+			"targetId" : "libglew_static::@7820ca8949c272dc3d1d",
+			"targetIndex" : 6,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"SparkyEngine/lib/glew/lib/libglew-sharedd.2.1.0.dylib"
+			],
+			"targetId" : "libglew_shared::@7820ca8949c272dc3d1d",
+			"targetIndex" : 5,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"SparkyEngine/lib/glew/lib/libglew-sharedd.dylib"
+			],
+			"targetId" : "libglew_shared::@7820ca8949c272dc3d1d",
+			"targetIndex" : 5,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/glew",
+			"exportName" : "glew-cmake",
+			"exportTargets" : 
+			[
+				{
+					"id" : "libglew_static::@7820ca8949c272dc3d1d",
+					"index" : 6
+				},
+				{
+					"id" : "libglew_shared::@7820ca8949c272dc3d1d",
+					"index" : 5
+				}
+			],
+			"paths" : 
+			[
+				"SparkyEngine/lib/glew/CMakeFiles/Export/lib/cmake/glew/glewConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/GL",
+			"paths" : 
+			[
+				"SparkyEngine/lib/glew/include/GL/eglew.h",
+				"SparkyEngine/lib/glew/include/GL/glew.h",
+				"SparkyEngine/lib/glew/include/GL/glxew.h",
+				"SparkyEngine/lib/glew/include/GL/wglew.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "SparkyEngine/lib/glew",
+		"source" : "SparkyEngine/lib/glew"
+	}
+}
