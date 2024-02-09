@@ -1,0 +1,315 @@
+{
+  "homebrew_version": "4.0.19-32-g89dfe4f",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": true,
+  "loaded_from_api": true,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+
+  ],
+  "time": 1686915451,
+  "source_modified_time": 1685320586,
+  "compiler": "clang",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+    {
+      "full_name": "gmp",
+      "version": "6.2.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "isl",
+      "version": "0.26",
+      "declared_directly": false
+    },
+    {
+      "full_name": "mpfr",
+      "version": "4.2.0-p9",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libmpc",
+      "version": "1.3.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "lz4",
+      "version": "1.9.4",
+      "declared_directly": false
+    },
+    {
+      "full_name": "xz",
+      "version": "5.4.3",
+      "declared_directly": false
+    },
+    {
+      "full_name": "zstd",
+      "version": "1.5.5",
+      "declared_directly": false
+    },
+    {
+      "full_name": "gcc",
+      "version": "13.1.0",
+      "declared_directly": false
+    },
+    {
+      "full_name": "hwloc",
+      "version": "2.9.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "ca-certificates",
+      "version": "2023-05-30",
+      "declared_directly": false
+    },
+    {
+      "full_name": "openssl@1.1",
+      "version": "1.1.1u",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libevent",
+      "version": "2.1.12",
+      "declared_directly": false
+    },
+    {
+      "full_name": "open-mpi",
+      "version": "4.1.5",
+      "declared_directly": false
+    },
+    {
+      "full_name": "fftw",
+      "version": "3.3.10",
+      "declared_directly": true
+    },
+    {
+      "full_name": "libpng",
+      "version": "1.6.39",
+      "declared_directly": true
+    },
+    {
+      "full_name": "freetype",
+      "version": "2.13.0",
+      "declared_directly": false
+    },
+    {
+      "full_name": "fontconfig",
+      "version": "2.14.2",
+      "declared_directly": false
+    },
+    {
+      "full_name": "jpeg-turbo",
+      "version": "2.1.5.1",
+      "declared_directly": true
+    },
+    {
+      "full_name": "brotli",
+      "version": "1.0.9",
+      "declared_directly": false
+    },
+    {
+      "full_name": "giflib",
+      "version": "5.2.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "highway",
+      "version": "1.0.4",
+      "declared_directly": false
+    },
+    {
+      "full_name": "imath",
+      "version": "3.1.9",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libtiff",
+      "version": "4.5.0",
+      "declared_directly": true
+    },
+    {
+      "full_name": "little-cms2",
+      "version": "2.15",
+      "declared_directly": false
+    },
+    {
+      "full_name": "openexr",
+      "version": "3.1.8",
+      "declared_directly": true
+    },
+    {
+      "full_name": "webp",
+      "version": "1.3.0",
+      "declared_directly": false
+    },
+    {
+      "full_name": "jpeg-xl",
+      "version": "0.8.2",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libvmaf",
+      "version": "2.3.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "aom",
+      "version": "3.6.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libavif",
+      "version": "0.11.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "gd",
+      "version": "2.3.3",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libcerf",
+      "version": "2.3",
+      "declared_directly": false
+    },
+    {
+      "full_name": "lua",
+      "version": "5.4.6",
+      "declared_directly": false
+    },
+    {
+      "full_name": "pcre2",
+      "version": "10.42",
+      "declared_directly": false
+    },
+    {
+      "full_name": "gettext",
+      "version": "0.21.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "glib",
+      "version": "2.76.3",
+      "declared_directly": false
+    },
+    {
+      "full_name": "xorgproto",
+      "version": "2023.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libxau",
+      "version": "1.0.11",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libxdmcp",
+      "version": "1.1.4",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libxcb",
+      "version": "1.15",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libx11",
+      "version": "1.8.4",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libxext",
+      "version": "1.3.5",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libxrender",
+      "version": "0.9.11",
+      "declared_directly": false
+    },
+    {
+      "full_name": "lzo",
+      "version": "2.10",
+      "declared_directly": false
+    },
+    {
+      "full_name": "pixman",
+      "version": "0.42.2",
+      "declared_directly": false
+    },
+    {
+      "full_name": "cairo",
+      "version": "1.16.0",
+      "declared_directly": false
+    },
+    {
+      "full_name": "fribidi",
+      "version": "1.0.13",
+      "declared_directly": false
+    },
+    {
+      "full_name": "graphite2",
+      "version": "1.3.14",
+      "declared_directly": false
+    },
+    {
+      "full_name": "icu4c",
+      "version": "72.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "harfbuzz",
+      "version": "7.3.0",
+      "declared_directly": false
+    },
+    {
+      "full_name": "pango",
+      "version": "1.50.14",
+      "declared_directly": false
+    },
+    {
+      "full_name": "qt@5",
+      "version": "5.15.9",
+      "declared_directly": false
+    },
+    {
+      "full_name": "readline",
+      "version": "8.2.1",
+      "declared_directly": false
+    },
+    {
+      "full_name": "gnuplot",
+      "version": "5.4.8",
+      "declared_directly": true
+    }
+  ],
+  "source": {
+    "spec": "stable",
+    "versions": {
+      "stable": "1.2.0",
+      "head": null,
+      "version_scheme": 0
+    },
+    "path": "/opt/homebrew/Library/Taps/homebrew/homebrew-core/Formula/matplotplusplus.rb",
+    "tap_git_head": "22e59c1bc4ce894540f4ca713ac9d639733e8686",
+    "tap": "homebrew/core"
+  },
+  "arch": "arm64",
+  "built_on": {
+    "os": "Macintosh",
+    "os_version": "macOS 11.7",
+    "cpu_family": "arm_firestorm_icestorm",
+    "xcode": "13.2.1",
+    "clt": "13.2.0.0.1.1638488800",
+    "preferred_perl": "5.30"
+  }
+}
