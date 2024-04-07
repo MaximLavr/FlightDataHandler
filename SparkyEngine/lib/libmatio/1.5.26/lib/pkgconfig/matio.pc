@@ -1,0 +1,10 @@
+prefix=/opt/homebrew/Cellar/libmatio/1.5.26
+exec_prefix=${prefix}
+libdir=/opt/homebrew/Cellar/libmatio/1.5.26/lib
+includedir=${prefix}/include
+
+Name: MATIO
+Description: MATIO Library
+Version: 1.5.26
+Libs: -L${libdir} -lmatio -L/opt/homebrew/opt/hdf5/lib -lhdf5 -lz
+Cflags: -I${includedir} -I/opt/homebrew/opt/hdf5/include 

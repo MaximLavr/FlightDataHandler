@@ -1,0 +1,45 @@
+{
+  "homebrew_version": "2.7.2",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": true,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+
+  ],
+  "time": 1643390824,
+  "source_modified_time": 1533081188,
+  "stdlib": "libcxx",
+  "compiler": "clang",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+
+  ],
+  "source": {
+    "spec": "stable",
+    "versions": {
+      "stable": "3.18.0",
+      "head": null,
+      "version_scheme": 0
+    },
+    "path": "/opt/homebrew/Library/Taps/homebrew/homebrew-core/Formula/freeimage.rb",
+    "tap_git_head": "28c4928835be7df7ac34928d42f14d027416f001",
+    "tap": "homebrew/core"
+  },
+  "arch": "arm64",
+  "built_on": {
+    "os": "Macintosh",
+    "os_version": "macOS 11.1",
+    "cpu_family": "arm_vortex_tempest",
+    "xcode": "12.3",
+    "clt": "12.3.0.0.1.1607026830"
+  }
+}
