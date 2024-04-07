@@ -1,4 +1,5 @@
 #define N_TAGIL 1
+#define SLOW_SPEED_ON_SCROLL 0
 
 #include "../SparkyEngine/src/sparky.h"
 #include "UI/button.h"
@@ -802,7 +803,7 @@ public:
                 subWindowSurfaceType->ScrollLeft(ts.GetMilliseconds());
         }
 
-#if SLOW_SPEED
+#if SLOW_SPEED_ON_SCROLL
         if (subWindowGraphics->m_RenderableMinPositionY + subWindowGraphics->m_Speed > subWindowGraphics->m_PaddingDown) {
             subWindowGraphics->m_Speed = subWindowGraphics->m_SlowSpeed; //0.2f
             std::cout << "SLOW!" << std::endl;
@@ -857,3 +858,5 @@ int main()
 
     return 0;
 }
+
+//area_and_line - ошибка
