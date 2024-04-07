@@ -858,5 +858,3 @@ int main()
 
     return 0;
 }
-
-//area_and_line - ошибка
