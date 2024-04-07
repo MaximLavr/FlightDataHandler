@@ -3,7 +3,7 @@
 using namespace sparky;
 using namespace graphics;
 
-Button::Button(float x, float y, float width, float height, unsigned int color, Label *text, Window* window,
+Button::Button(float x, float y, float width, float height, unsigned int color, Renderable2D *textOrSprite, Window* window,
     vec4 colorHover, vec4 colorPressed)
         : Group(mat4().translation(vec3(0, 0, 0)))
 {
@@ -18,12 +18,12 @@ Button::Button(float x, float y, float width, float height, unsigned int color, 
     m_ColorHover = colorHover;
     m_ColorPressed = colorPressed;
 
-    text->position.x += x;
-    text->position.y += y;
+    textOrSprite->m_Position.x += x;
+    textOrSprite->m_Position.y += y;
 
     auto* sprite = new Renderable2D(maths::vec3(x, y, 0.0f), maths::vec2(width, height), color);
     m_Renderables.push_back(sprite);
-    m_Renderables.push_back(text);
+    m_Renderables.push_back(textOrSprite);
 
     m_HoverSprite = new Sprite(x, y,
                              width, height,
@@ -34,7 +34,7 @@ Button::Button(float x, float y, float width, float height, unsigned int color, 
                                transform_color(m_ColorPressed.x, m_ColorPressed.y, m_ColorPressed.z, m_ColorPressed.w));
 
     this->add(sprite);
-    this->add(text);
+    this->add(textOrSprite);
 }
 
 /*void Button::DeleteRenderable(Renderable2D* renderable) const {
