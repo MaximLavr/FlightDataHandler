@@ -1,191 +1,64 @@
-#include "button.h"
+#pragma once
+#include "../../SparkyEngine/src/engine.h"
 
 using namespace sparky;
 using namespace graphics;
 
-Button::Button(float x, float y, float width, float height, unsigned int color, Renderable2D *textOrSprite, Window* window,
-    vec4 colorHover, vec4 colorPressed)
-        : Group(mat4().translation(vec3(0, 0, 0)))
-{
-    m_Window = window;
-    m_Position = vec2(x, y);
-    m_Size = vec2(width, height);
-    m_Color = color;
+class Button : public Group {
 
+public:
+    Button(float x, float y, float width, float height, unsigned int color, Renderable2D* textOrSprite, Window* window,
+           vec4 colorHover = vec4(0, 0, 0, 0.15f), vec4 colorPressed = vec4(0, 0, 0, 0.5f));
 
-    //m_ColorHover = vec4(0, 0, 0, 0.15f);
-    //m_ColorPressed = vec4(0, 0, 0, 0.5f);
-    m_ColorHover = colorHover;
-    m_ColorPressed = colorPressed;
+    vec2 getPosition() const { return m_Position; }
+    vec2 getSize() const { return m_Size; }
+    unsigned int getColor() { return m_Color; }
+    void setColorHover(vec4 color);
+    void setColorPressed(vec4 color);
+    void submit(Renderer2D* renderer) const;
 
-    textOrSprite->m_Position.x += x;
-    textOrSprite->m_Position.y += y;
+    bool isClickedVar = false;
+    ~Button() {
+        delete m_Shader;
+        delete m_HoverSprite;
+        delete m_PressedSprite;
+        for (auto& i : m_Renderables)
+            delete i;
+    };
 
-    auto* sprite = new Renderable2D(maths::vec3(x, y, 0.0f), maths::vec2(width, height), color);
-    m_Renderables.push_back(sprite);
-    m_Renderables.push_back(textOrSprite);
+    bool isPresed() { return m_IsPressed; }
+     bool do1;
+     bool prev_do1;
+    bool m_IsHovered = false;
+    bool isHovered() const;
+    bool isPressed() const;
+    bool isReleasedAfterPress() const;
 
-    m_HoverSprite = new Sprite(x, y,
-                             width, height,
-                             transform_color(m_ColorHover.x, m_ColorHover.y, m_ColorHover.z, m_ColorHover.w));
+    vec2 m_Position;
+private:
+    Window* m_Window;
+    vec2 m_Size;
+    unsigned int m_Color;
+    vec4 m_ColorHover;
+    vec4 m_ColorPressed;
 
-    m_PressedSprite = new Sprite(x, y,
-                               width, height,
-                               transform_color(m_ColorPressed.x, m_ColorPressed.y, m_ColorPressed.z, m_ColorPressed.w));
+    std::vector<Renderable2D*> m_Renderables;
 
-    this->add(sprite);
-    this->add(textOrSprite);
-}
+    Shader* m_Shader;
 
-/*void Button::DeleteRenderable(Renderable2D* renderable) const {
-    auto it = std::find(m_Renderables.begin(), m_Renderables.end(), renderable);
-    if(it != m_Renderables.end())
-        m_Renderables.erase(it);
-    //renderable->DeleteTexture();
-    if ( m_Renderables.back()->m_Texture != nullptr)
-        m_Renderables.back()->m_Texture->deleteTexture();
-    delete renderable;
-}*/
+    Renderable2D* m_HoverSprite;
+    Renderable2D* m_PressedSprite;
 
-bool Button::isHovered() const {
-#ifdef __APPLE__
-    float x = m_Window->getMousePosition().x / (m_Window->getWidth() / m_Window->cameraRight / 2.0f) - m_Window->cameraRight;
-    float y = -(m_Window->getMousePosition().y / (m_Window->getHeight() / m_Window->cameraUp / 2.0f) - m_Window->cameraUp);
-#else
-    float x = (m_Window->getMousePosition().x - m_Window->getWidth() / 2.0f) / 30.0f;
-    float y = -(m_Window->getMousePosition().y - m_Window->getHeight() / 2.0f) / 30.0f;
-#endif
-    if ((x >= this->getPosition().x) && (x <= this->getPosition().x + this->getSize().x) &&
-        (y >= this->getPosition().y) && (y <= this->getPosition().y + this->getSize().y)) {
-        return true;
-    }
-    return false;
-}
+    bool m_IsPressed = false;
+    bool m_IsClicked = false;
+    bool isClicked() const;
 
-bool Button::isPressed() const {
-    if (m_Window->isMouseButtonPressed(GLFW_MOUSE_BUTTON_1)) {
-        //const_cast<bool&>(press) = true;
-       return true;
-    }
-    return false;
-}
+    bool canDo;
 
-bool Button::isClicked() const {
-    if (m_Window->isMouseButtonClicked(GLFW_MOUSE_BUTTON_1)) {
-        return true;
-    }
-    return false;
-}
+    bool flag;
 
-void Button::setColorHover(vec4 color)
-{
-    m_ColorHover = color;
-    m_HoverSprite->setColor(m_ColorHover);
-}
+    bool press;
+    bool release;
 
-void Button::setColorPressed(vec4 color)
-{
-    m_ColorPressed = color;
-    m_PressedSprite->setColor(m_ColorPressed);
-}
-
-#if 0
-void Button::submit(Renderer2D* renderer) const
-{
-    if (this->isHovered() && !m_IsHovered)
-    {
-        const_cast<std::vector<Renderable2D *> &>(m_Renderables).push_back(m_HoverSprite);
-        const_cast<bool&>(m_IsHovered) = true;
-    }
-    if (this->isHovered() && m_IsHovered)
-    {
-        if (this->isClicked())
-        {
-            std::cout << "CLICKED!" << std::endl;
-            const_cast<std::vector<Renderable2D *> &>(m_Renderables).push_back(m_PressedSprite);
-        }
-    }
-    if (!this->isHovered() && m_IsHovered)
-    {
-        const_cast<std::vector<Renderable2D *> &>(m_Renderables).pop_back();
-        const_cast<bool&>(m_IsHovered) = false;
-    }
-
-    renderer->push(m_TransformationMatrix);
-
-    for (const Renderable2D* renderable : m_Renderables)
-    {
-        renderable->submit(renderer);
-    }
-
-    renderer->pop();
-}
-#endif
-
-
-#if 1
-void Button::submit(Renderer2D* renderer) const
-{
-#if 1
-    if (this->isHovered()) {
-        if (this->isPressed() && !m_IsPressed) {
-            if (!isClickedVar)
-                const_cast<bool&>(m_IsPressed) = true;
-            const_cast<std::vector<Renderable2D *> &>(m_Renderables).push_back(m_PressedSprite);
-        }
-        if (!this->isPressed() && m_IsPressed) {
-            //m_Renderables.back()->DeleteTexture();
-            if (m_Renderables.back()->m_Texture!= nullptr)
-                m_Renderables.back()->m_Texture->deleteTexture();
-            const_cast<std::vector<Renderable2D *> &>(m_Renderables).pop_back();
-            const_cast<bool&>(isClickedVar) = true;
-        }
-        else {
-            const_cast<bool &>(isClickedVar) = false;
-        }
-
-        if (!m_IsHovered)
-            const_cast<std::vector<Renderable2D *> &>(m_Renderables).push_back(m_HoverSprite);
-
-        const_cast<bool&>(m_IsHovered) = true;
-    }
-    if (!this->isHovered() && m_IsHovered) {
-        //m_Renderables.back()->DeleteTexture();
-        if (m_Renderables.back()->m_Texture!= nullptr)
-            m_Renderables.back()->m_Texture->deleteTexture();
-        const_cast<std::vector<Renderable2D*>&>(m_Renderables).pop_back();
-        const_cast<bool&>(m_IsHovered) = false;
-    }
-
-    if (!this->isHovered() && m_IsPressed) {
-        //m_Renderables.back()->DeleteTexture();
-        if (m_Renderables.back()->m_Texture!= nullptr)
-            m_Renderables.back()->m_Texture->deleteTexture();
-        const_cast<std::vector<Renderable2D*>&>(m_Renderables).pop_back();
-        const_cast<bool&>(m_IsHovered) = false;
-        const_cast<bool&>(m_IsPressed) = false;
-    }
-
-    if (!this->isPressed() && m_IsPressed) {
-        const_cast<bool&>(m_IsPressed) = false;
-    }
-    renderer->push(m_TransformationMatrix);
-
-    for (const Renderable2D* renderable : m_Renderables)
-    {
-        renderable->submit(renderer);
-    }
-    if (!this->isHovered() && !m_IsHovered) {
-        if (m_Renderables.size() > 2) {
-            if (m_Renderables.back()->m_Texture != nullptr)
-                m_Renderables.back()->m_Texture->deleteTexture();
-            const_cast<std::vector<Renderable2D *> &>(m_Renderables).pop_back();
-        }
-        const_cast<bool&>(m_IsHovered) = false;
-    }
-
-    renderer->pop();
-#endif
-}
-#endif
-
+    void DeleteRenderable(Renderable2D* renderable) const;
+};
