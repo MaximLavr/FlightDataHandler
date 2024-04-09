@@ -161,4 +161,6 @@ if (APPLE)
     target_link_libraries(FlightDataHandler "-framework OpenGL")
 endif()
 
-find_package(opencv REQUIRED)
+if (APPLE)
+    find_package(opencv REQUIRED)
+endif()
